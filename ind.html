@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://kit.fontawesome.com/eb3f82516f.js" crossorigin="anonymous"></script>
+	  <link rel="stylesheet" href="./src/css/style.css">
+   </head>
+   <body>
+      <div class="sidebar" id="sidebar">
+         <a href="#" id="client_btn">
+            <i class="far fa-id-card"></i> 
+            <l id="client"></l>
+         </a>
+         <a href="#" id="ptero_btn">
+            <i class="fas fa-server"></i> 
+            <l id="ptero"></l>
+         </a>
+         <a href="#" id="webhost_btn">
+            <i class="fas fa-address-card"></i> 
+            <l id="webhost"></l>
+         </a> 
+         <hr>
+         <div class="below_menu">
+            <a href="#" id="settings_open">
+               <i class="fas fa-cog"></i>
+               <l id="settings"></l>
+            </a>
+         </div>
+      </div>
+      <div class="settings" id="settings_tab" >
+         <div class="title">
+            <h2 id="h2"></h2>
+         </div>
+		 <div class="compact">
+			<h4 id="sidebarver"></h4>
+         <div id="comp-options" style="display: inline-block"><button id="compact" class="btn"></button><button id="not-compact" class="btn"></button></div>
+		 </div>
+       <div class="language compact">
+          <h4 id="preferredlang"></h4>
+          <div id="comp-options" style="display: inline-block">
+            <button id="english" class="btn">English</button>
+          <button id="france" class="btn">France</button>
+          <button id="chinese" class="btn">中文</button>
+          <button id="russian" class="btn">Russian</button>
+
+          <!--<button id="german" class="btn">Deutsch</button>-->
+
+         </div>
+
+       </div>
+       <div class="app-version compact">
+         <h4 id="app_version"></h4>
+       </div>
+	    </div>
+      <webview src="https://client.centronodes.com" id="client_web" autosize="on" allowpopups style="position: relative; width: 75%; height:100%; left: 360px; display: none;"></webview>
+      <webview src="https://panel.centronodes.com" id="panel_web" autosize="on" allowpopups style="position: relative; width: 75%; height:100%; left: 360px; display: none;"></webview>
+      <webview src="https://webhost.sh" id="webhost_web" autosize="on" allowpopups style="position: relative; width: 75%; height:100%; left: 360px; display: none;"></webview>
+      <script src="./src/js/handler.js"></script>
+   </body>
+</html>
